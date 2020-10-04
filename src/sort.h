@@ -38,21 +38,61 @@ namespace csi281 {
     // using the bubble sort algorithm
     template <typename T>
     void bubbleSort(T array[], const int length) {
-        // YOUR CODE HERE
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = 0; j < length - i; j++)
+            {
+                if (array[j] > array[j+1])
+                {
+                    T temp = array[j];  
+                    array[j] = array[j+1];  
+                    array[j+1] = temp;
+                }
+            }
+        }
     }
     
     // Performs an in-place ascending sort of *array* of size *length*
     // using the selection sort algorithm
     template <typename T>
     void selectionSort(T array[], const int length) {
-        // YOUR CODE HERE
+        for (int i = 0; i < length - 1; i++)
+        {
+            int min_index = i;
+            for (int j = i + 1; j < length; j++)
+            {
+                if (array[j] < array[min_index])
+                {
+                    min_index = j;
+                }
+
+                T temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+
+            }
+                
+        }
     }
     
     // Performs an in-place ascending sort of *array* of size *length*
-    // using the insertion sort algorithm
+    // using the insertion sort algorithm+[]o
     template <typename T>
     void insertionSort(T array[], const int length) {
-        // YOUR CODE HERE
+        for (int i = 1; i < length; i++)
+        {
+            int insert_at = i;
+            T item = array[i];
+            int j = i - 1;
+            while (j >= 0 && (array[j] > item))
+            {
+                array[j+1] = array[j];
+                j--;
+            }
+            insert_at = j;
+            array[j+1] = insert_at;
+            array[insert_at] = item;
+        }
     }
 }
 

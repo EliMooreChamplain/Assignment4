@@ -1,0 +1,11 @@
+1. 
+The operations that bubble sort uses a lot more processing than other sorting algorithms
+
+2.
+Insertion sort generally performs less comparisons than selection sort
+
+3.
+I don't know the answer to this
+
+4.
+Because it is a mixture of a bunch of different sorting algorithms. 
